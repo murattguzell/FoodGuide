@@ -46,6 +46,7 @@ class FoodListViewModel(application: Application) : AndroidViewModel(application
                 withContext(Dispatchers.Main) {
                     showFoods(foodList)
                     saveToRoom(foodList)
+                    Toast.makeText(getApplication(), "Besinleri İnternet'ten aldık", Toast.LENGTH_LONG).show()
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -65,6 +66,7 @@ class FoodListViewModel(application: Application) : AndroidViewModel(application
                 val foodList = FoodDatabase(getApplication()).foodDao().getAllFood()
                 withContext(Dispatchers.Main) {
                     showFoods(foodList)
+                    Toast.makeText(getApplication(), "Besinleri Room'dan aldık", Toast.LENGTH_LONG).show()
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
