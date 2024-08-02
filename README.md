@@ -1,7 +1,6 @@
 
 # Food Guide
 
-Proje Hakkında
 Food Guide, besinlerin kalorilerini ve içerdiği protein, yağ ve karbonhidrat miktarlarını görüntülemenize olanak tanır. Bu uygulama, kullanıcıların sağlıklı beslenme ve diyet planlamasına yardımcı olmak amacıyla besinlerin besin değerlerini ayrıntılı bir şekilde sunar.
 
 
@@ -48,10 +47,10 @@ Glide: Resimlerin yüklenmesini ve gösterimini sağlar. Resimlerin indirimi ve 
 **SharedPreferences:** Uygulama içi küçük veri parçalarını kalıcı olarak saklamak için kullanılır. PrivateSharedPreferences sınıfı veri saklama ve okuma işlemlerini yönetir. Bu, kullanıcı ayarları ve küçük veri parçalarının saklanmasını sağlar. Projede, veri güncelleme zamanını saklamak için kullanılır.**
 
   ### Ekran Görüntüleri
-| Ekran Görüntüsü 1 | Ekran Görüntüsü 2 | Ekran Görüntüsü 3 | Ekran Görüntüsü 4 |
+
 |------------------|------------------|------------------|------------------|
 | ![Ekran 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss1.png?raw=true) | ![Ekran 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss2.png?raw=true) | ![Ekran 3](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss3.png?raw=true) | ![Ekran 4](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss4.png?raw=true) |
 
-| Ekran Görüntüsü 5 | Ekran Görüntüsü 6 | Ekran Görüntüsü 7 | Ekran Görüntüsü 8 |
+
 |------------------|------------------|------------------|------------------|
 | ![Ekran 5](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss5.png?raw=true) | ![Ekran 6](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss6.png?raw=true) | ![Ekran 7](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss7.png?raw=true) | ![Ekran 8](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss8.png?raw=true) |
