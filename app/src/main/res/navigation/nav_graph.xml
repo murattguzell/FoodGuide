@@ -20,7 +20,7 @@
         android:label="fragment_food_details"
         tools:layout="@layout/fragment_food_details" >
         <argument
-            android:name="besinId"
+            android:name="foodId"
             app:argType="integer" />
     </fragment>
 </navigation>
