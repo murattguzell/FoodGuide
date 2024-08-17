@@ -38,7 +38,8 @@ Food Guide, besinlerin kalorilerini ve içerdiği protein, yağ ve karbonhidrat 
 
 Açıklama: Kalıcı veri saklama ve SQLite veritabanı ile etkileşim sağlar. Veritabanı işlemleri için DAO (Data Access Object) ve RoomDatabase sınıfları kullanılır. Projede FoodDatabase ve FoodDao sınıfları, besin verilerini kalıcı olarak saklar ve okur. Room, verilerin güvenli bir şekilde saklanmasını ve yönetilmesini sağlar.
 Projede Kullanım: Veriler, internetten çekildikten sonra Room veritabanında 10 dakika boyunca saklanır. 10 dakika geçtikten sonra, verilerin güncellenmesi amacıyla internetten yeniden çekilir. Eğer internet bağlantısı sağlanamazsa, Room veritabanındaki eski veriler kullanılmaya devam eder.
-Glide: Resimlerin yüklenmesini ve gösterimini sağlar. Resimlerin indirimi ve placeholder oluşturulması için kullanılır. Bu, uygulamanın görsel içeriğinin yönetimini kolaylaştırır. Projede, besin resimlerinin yüklenmesi ve görüntülenmesi için kullanılır.
+
+**Glide:** Resimlerin yüklenmesini ve gösterimini sağlar. Resimlerin indirimi ve placeholder oluşturulması için kullanılır. Bu, uygulamanın görsel içeriğinin yönetimini kolaylaştırır. Projede, besin resimlerinin yüklenmesi ve görüntülenmesi için kullanılır.
 
 **Retrofit:** REST API ile ağ işlemleri yapmak için kullanılır. JSON verilerini almak ve dönüştürmek için kullanılır. Bu, ağ üzerinden veri çekme işlemlerini basit ve etkili bir şekilde gerçekleştirir. Projede, besin verilerini internetten almak için kullanılır.
 
