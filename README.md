@@ -45,6 +45,11 @@ Usage in the Project: After being pulled from the internet, the data is stored i
 **SharedPreferences:** Used to permanently store small pieces of data within the application. The PrivateSharedPreferences class manages data storage and reading operations. This allows storing user settings and small pieces of data. In the project, it is used to store the data update time.**
 
 ### Screenshots
-| Screenshot 1 | Screenshot 2 | Screenshot 3 | Screenshot 4 |
+|||||
 |------------------|------------------|------------------|------------------|
-| ![Screen 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss1.png?raw=true) | ![Screen 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss2.png?raw=true) | ![Screen 3](https://github.com/murat-guzel33/myScreenShotFiles/bl
+| ![Ekran 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss1.png?raw=true) | ![Ekran 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss2.png?raw=true) | ![Ekran 3](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss3.png?raw=true) | ![Ekran 4](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss4.png?raw=true) |
+
+
+|||||
+|------------------|------------------|------------------|------------------|
+| ![Ekran 5](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss5.png?raw=true) | ![Ekran 6](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss6.png?raw=true) | ![Ekran 7](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss7.png?raw=true) | ![Ekran 8](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss8.png?raw=true) |
