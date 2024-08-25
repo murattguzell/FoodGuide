@@ -1,57 +1,50 @@
-
 # Food Guide
 
-Food Guide, besinlerin kalorilerini ve içerdiği protein, yağ ve karbonhidrat miktarlarını görüntülemenize olanak tanır. Bu uygulama, kullanıcıların sağlıklı beslenme ve diyet planlamasına yardımcı olmak amacıyla besinlerin besin değerlerini ayrıntılı bir şekilde sunar.
+Food Guide allows you to view the calories and protein, fat and carbohydrate content of foods. This application provides detailed nutritional values ​​of foods to help users plan healthy eating and diets.
 
+## Features
 
+- Food List Display: The application presents a list of various foods to the user. Each food is displayed with its name, calories and picture.
 
-## Özellikler
+- Food Details: When users click on a food, they are directed to the details of the food. These details include the calories, protein, fat and carbohydrate amounts of the food.
 
-- Besin Listesi Görüntüleme: Uygulama, çeşitli besinlerin listesini kullanıcıya sunar. Her besin, ismi, kalorisi ve resmi ile birlikte gösterilir.
+- Data Update: The application retrieves data from the internet or local database. If there is an internet connection, the data is updated; if there is no connection, the old data continues to be used. Users have the option to manually refresh the data.
 
-- Besin Detayları: Kullanıcılar, bir besine tıkladığında, besinin detaylarına yönlendirilir. Bu detaylar, besinin kalori, protein, yağ ve karbonhidrat miktarlarını içerir.
+- Image Upload and Display: The images of the foods are uploaded and displayed using the Glide library.
 
-- Veri Güncelleme: Uygulama, verileri internetten veya yerel veritabanından alır. İnternet bağlantısı varsa, veriler güncellenir; bağlantı yoksa, eski veriler kullanılmaya devam eder. Kullanıcılar, verileri manuel olarak yenileme seçeneğine sahiptir.
+- Dynamic Data Management: The application sets a 10-minute period for the data to be updated. After this period, the data is automatically updated.
 
-- Resim Yükleme ve Görüntüleme: Besinlerin görselleri Glide kütüphanesi kullanılarak yüklenir ve gösterilir.
+- Refresh Feature: Users can refresh the list by swiping. This process allows data to be re-fetched from the internet and increases dynamic data updates.
 
-- Dinamik Veri Yönetimi: Uygulama, verilerin güncellenmesi için 10 dakikalık bir süre belirler. Bu süre sonunda veriler otomatik olarak güncellenir.
+## Technologies Used
 
-- Yenileme Özelliği: Kullanıcılar, listeyi kaydırarak yenileyebilirler. Bu işlem verilerin internetten yeniden çekilmesini sağlar ve dinamik veri güncellemelerini artırır.
+**Fragment:** Makes user interface components modular and reusable. In the project, it manages the interface in different pieces and improves the overall layout of the application.
 
-  
-## Kullanılan Teknolojiler
+**MVVM (Model-View-ViewModel):** Manages application data and provides the connection between UI and data. It provides separation between Model, View and ViewModel components and helps to make the application code more organized and testable. In the project, it is used to process application data and bind it to the user interface.
 
-**Fragment:** Kullanıcı arayüzü bileşenlerini modüler ve yeniden kullanılabilir hale getirir. Projede, arayüzü farklı parçalar halinde yönetir ve uygulamanın genel düzenini iyileştirir.
+**LiveData:** Used as a lifecycle-aware data manager. It ensures that data is delivered to UI components securely. In the project, it automatically reflects data changes to the user interface.
 
-**MVVM (Model-View-ViewModel):** Uygulama verilerini yönetir ve UI ile veri arasındaki bağlantıyı sağlar. Model, View ve ViewModel bileşenleri arasındaki ayrımı sağlar ve uygulama kodunun daha düzenli ve test edilebilir olmasına yardımcı olur. Projede, uygulama verilerini işlemek ve kullanıcı arayüzüne bağlamak için kullanılır.
+**ViewBinding:** Provides type-safe access to XML layout files. This makes coding safer and error-free. In the project, it provides easy and secure access to components in XML files.
 
-**LiveData:** Yaşam döngüsüne duyarlı veri yöneticisi olarak kullanılır. Verilerin UI bileşenlerine güvenli bir şekilde iletilmesini sağlar. Projede, veri değişikliklerini kullanıcı arayüzüne otomatik olarak yansıtır.
+**SwipeRefreshLayout:** Allows the user to swipe to refresh the list. This increases user interaction and facilitates dynamic data updates. In the project, it allows users to manually update the list.
 
-**ViewBinding:** XML layout dosyalarına tür güvenli erişim sağlar. Bu, kod yazımını daha güvenli ve hatasız hale getirir. Projede, XML dosyalarındaki bileşenlere kolay ve güvenli bir şekilde erişim sağlar.
-
-**SwipeRefreshLayout:** Kullanıcının listeyi yenilemek için kaydırma hareketi yapabilmesini sağlar. Bu, kullanıcı etkileşimini artırır ve dinamik veri güncellemelerini kolaylaştırır. Projede, kullanıcıların listeyi manuel olarak güncellemelerine olanak tanır.
-
-**Navigation Component:** Fragmentlar arasında geçiş yapar ve argümanları güvenli bir şekilde iletir. Bu, uygulama içi navigasyonu daha kolay ve güvenli hale getirir. Projede, fragmentlar arasında güvenli ve verimli geçişler sağlar.
+**Navigation Component:** Switches between fragments and securely passes arguments. This makes in-app navigation easier and safer. In the project, it provides secure and efficient transitions between fragments.
 
 **Room:**
 
-Açıklama: Kalıcı veri saklama ve SQLite veritabanı ile etkileşim sağlar. Veritabanı işlemleri için DAO (Data Access Object) ve RoomDatabase sınıfları kullanılır. Projede FoodDatabase ve FoodDao sınıfları, besin verilerini kalıcı olarak saklar ve okur. Room, verilerin güvenli bir şekilde saklanmasını ve yönetilmesini sağlar.
-Projede Kullanım: Veriler, internetten çekildikten sonra Room veritabanında 10 dakika boyunca saklanır. 10 dakika geçtikten sonra, verilerin güncellenmesi amacıyla internetten yeniden çekilir. Eğer internet bağlantısı sağlanamazsa, Room veritabanındaki eski veriler kullanılmaya devam eder.
+Description: Provides persistent data storage and interaction with the SQLite database. DAO (Data Access Object) and RoomDatabase classes are used for database operations. In the project, FoodDatabase and FoodDao classes permanently store and read food data. Room provides secure storage and management of data.
 
-**Glide:** Resimlerin yüklenmesini ve gösterimini sağlar. Resimlerin indirimi ve placeholder oluşturulması için kullanılır. Bu, uygulamanın görsel içeriğinin yönetimini kolaylaştırır. Projede, besin resimlerinin yüklenmesi ve görüntülenmesi için kullanılır.
+Usage in the Project: After being pulled from the internet, the data is stored in the Room database for 10 minutes. After 10 minutes, it is pulled from the internet again to update the data. If the internet connection is not established, the old data in the Room database continues to be used.
 
-**Retrofit:** REST API ile ağ işlemleri yapmak için kullanılır. JSON verilerini almak ve dönüştürmek için kullanılır. Bu, ağ üzerinden veri çekme işlemlerini basit ve etkili bir şekilde gerçekleştirir. Projede, besin verilerini internetten almak için kullanılır.
+**Glide:** Provides loading and display of images. It is used for downloading images and creating placeholders. This makes it easier to manage the visual content of the application. In the project, it is used to load and display food images.
 
-**Coroutines:** Kotlin Coroutines, arka plan işlemlerini yönetir. viewModelScope.launch ve withContext gibi fonksiyonlar ile asenkron işlemler gerçekleştirilir. Bu, UI iş yükünü hafifletir ve daha akıcı bir kullanıcı deneyimi sağlar. Projede, verileri arka planda işlemek ve UI'yi güncellemek için kullanılır.
+**Retrofit:** Used to perform network operations with REST API. It is used to retrieve and transform JSON data. This performs data retrieval operations over the network in a simple and efficient way. In the project, it is used to retrieve food data from the internet.
 
-**SharedPreferences:** Uygulama içi küçük veri parçalarını kalıcı olarak saklamak için kullanılır. PrivateSharedPreferences sınıfı veri saklama ve okuma işlemlerini yönetir. Bu, kullanıcı ayarları ve küçük veri parçalarının saklanmasını sağlar. Projede, veri güncelleme zamanını saklamak için kullanılır.**
+**Coroutines:** Kotlin Coroutines manage background operations. Asynchronous operations are performed with functions such as viewModelScope.launch and withContext. This lightens the UI workload and provides a smoother user experience. In the project, it is used to process data in the background and update the UI.
 
-  ### Ekran Görüntüleri
-| Ekran Görüntüsü 1 | Ekran Görüntüsü 2 | Ekran Görüntüsü 3 | Ekran Görüntüsü 4 |
+**SharedPreferences:** Used to permanently store small pieces of data within the application. The PrivateSharedPreferences class manages data storage and reading operations. This allows storing user settings and small pieces of data. In the project, it is used to store the data update time.**
+
+### Screenshots
+| Screenshot 1 | Screenshot 2 | Screenshot 3 | Screenshot 4 |
 |------------------|------------------|------------------|------------------|
-| ![Ekran 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss1.png?raw=true) | ![Ekran 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss2.png?raw=true) | ![Ekran 3](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss3.png?raw=true) | ![Ekran 4](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss4.png?raw=true) |
-
-| Ekran Görüntüsü 5 | Ekran Görüntüsü 6 | Ekran Görüntüsü 7 | Ekran Görüntüsü 8 
-|------------------|------------------|------------------|------------------|
-| ![Ekran 5](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss5.png?raw=true) | ![Ekran 6](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss6.png?raw=true) | ![Ekran 7](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss7.png?raw=true) | ![Ekran 8](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss8.png?raw=true) |
+| ![Screen 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss1.png?raw=true) | ![Screen 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/Foods/Ss2.png?raw=true) | ![Screen 3](https://github.com/murat-guzel33/myScreenShotFiles/bl
