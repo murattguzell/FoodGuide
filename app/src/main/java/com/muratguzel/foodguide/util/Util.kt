@@ -7,10 +7,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.muratguzel.foodguide.R
 
-/* Extension example
-fun String.myAddOn(parametre:String){
-    println(parametre)
-}*/
 
 fun ImageView.imageDownload(url: String?, placeholder: CircularProgressDrawable) {
     val options = RequestOptions().placeholder(placeholder).error(R.drawable.error)

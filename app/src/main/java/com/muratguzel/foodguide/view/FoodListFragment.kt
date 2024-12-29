@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.muratguzel.foodguide.adapter.FoodAdapter
 import com.muratguzel.foodguide.databinding.FragmentFoodListBinding
 import com.muratguzel.foodguide.viewmodel.FoodListViewModel
@@ -37,7 +39,7 @@ class FoodListFragment : Fragment() {
         viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
         viewModel.refreshData()
 
-        binding.foodRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.foodRecyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         binding.foodRecyclerView.adapter = foodAdapter
         binding.swipeRefreshLayout.setOnRefreshListener {
             binding.foodRecyclerView.visibility = View.GONE

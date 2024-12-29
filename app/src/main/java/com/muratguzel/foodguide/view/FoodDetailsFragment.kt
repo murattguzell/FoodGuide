@@ -44,7 +44,8 @@ class FoodDetailsFragment : Fragment() {
 
     private fun observeLiveData() {
         viewModel.foodliveData.observe(viewLifecycleOwner) { food ->
-            binding.foodNameText.text = food.foodName
+            binding.toolbarDetails.title = food.foodName
+            binding.tvFoodName.text = food.foodName
             binding.foodCalorieText.text = food.foodCalorie
             binding.foodCarbohydrate.text = food.foodCarbohydrate
             binding.foodFat.text = food.foodFat
